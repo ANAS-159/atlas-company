@@ -1,0 +1,38 @@
+
+graph TB
+    subgraph A["Building A — Head Office and IT"]
+        CCA["CC-A"]
+        FWA["FW-A"]
+        ACCA1["ACC-A-01"]
+        ACCA2["ACC-A-02"]
+        ACCA3["ACC-A-03"]
+        ACCA4["ACC-A-04"]
+        ACCA5["ACC-A-05"]
+        ACCA6["ACC-A-06"]
+    end
+
+    subgraph B["Building B — Production"]
+        CCB["CC-B"]
+        FWB["FW-B"]
+        ACCB1["ACC-B-01"]
+        ACCB2["ACC-B-02"]
+        ACCB3["ACC-B-03"]
+        ACCB4["ACC-B-04"]
+    end
+
+    CCA --- CCB
+    CCA --- FWA
+    CCB --- FWB
+
+    FWA --- ACCA1
+    FWA --- ACCA2
+    FWA --- ACCA3
+    FWA --- ACCA4
+    FWA --- ACCA5
+    FWA --- ACCA6
+
+    FWB --- ACCB1
+    FWB --- ACCB2
+    FWB --- ACCB3
+    FWB --- ACCB4
+

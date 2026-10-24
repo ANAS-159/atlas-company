@@ -1,0 +1,17 @@
+graph LR
+    subgraph LOCA["Technical room A, Building A"]
+        CCA["CC-A"]
+        UPSA["UPS A"]
+        UPSA --- CCA
+    end
+
+    subgraph LOCB["Technical room B, Building B"]
+        CCB["CC-B"]
+        UPSB["UPS B"]
+        UPSB --- CCB
+    end
+
+    CCA --- R1["North technical gallery"]
+    R1 --- J["Shared cable chamber"]
+    J --- R2["South outer facade"]
+    R2 --- CCB
