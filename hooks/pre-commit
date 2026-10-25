@@ -1,0 +1,5 @@
+#!/bin/sh
+python3 scripts/check_vlans.py || {
+    echo "IP plan check failed: commit refused."
+    exit 1
+}
